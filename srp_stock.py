@@ -10,6 +10,7 @@ Stock en direct du distributeur La Spéciale (SRPManager / Resto'Clock).
     rouge  (barred)               -> périmée : BLOQUE TOUTE LA COLONNE
 - Écrit stock.json (lu par le site)
 """
+import csv
 import json
 import os
 import re
@@ -100,6 +101,78 @@ def parse(html: str) -> dict:
     }
 
 
+HISTO = "history.csv"
+ETAT = "alert_state.json"
+SEUIL_BAS = 2  # alerte quand une recette tombe à 2 pizzas ou moins
+
+
+def save_history(data: dict) -> None:
+    """Une ligne par colonne et par relevé -> base des stats de ventes."""
+    new = not os.path.exists(HISTO)
+    now = datetime.now(TZ).strftime("%Y-%m-%d %H:%M")
+    with open(HISTO, "a", encoding="utf-8", newline="") as f:
+        w = csv.writer(f)
+        if new:
+            w.writerow(["releve", "stock_machine", "colonne", "recette",
+                        "dispo", "vertes", "oranges", "rouges", "bloquee"])
+        for i, p in enumerate(data["pizzas"], 1):
+            w.writerow([now, data.get("stock_machine") or "", i, p["nom"], p["dispo"],
+                        p["vertes"], p["oranges"], p["rouges"], int(p["bloquee"])])
+
+
+def notify(title: str, message: str, priority: int = 4, tags=("pizza",)) -> None:
+    topic = os.environ.get("NTFY_TOPIC")
+    if not topic:
+        print("[alerte non envoyée, NTFY_TOPIC absent]", title, "-", message)
+        return
+    try:
+        requests.post("https://ntfy.sh/", json={
+            "topic": topic, "title": title, "message": message,
+            "priority": priority, "tags": list(tags),
+            "click": "https://pizzalambesclaspeciale.fr/distributeur/",
+        }, timeout=15)
+    except Exception as e:  # une alerte ratée ne doit jamais bloquer le relevé
+        print("Alerte non envoyée :", e)
+
+
+def check_alerts(data: dict) -> None:
+    """N'alerte qu'au changement d'état (pas de rappel toutes les 15 min)."""
+    try:
+        old = json.load(open(ETAT, encoding="utf-8"))
+    except Exception:
+        old = {"bloquees": [], "basses": [], "epuisees": [], "vide": False}
+
+    bloquees = [p["nom"] for p in data["pizzas"] if p["bloquee"]]
+    epuisees = [p["nom"] for p in data["pizzas"] if not p["bloquee"] and p["dispo"] == 0]
+    basses = [p["nom"] for p in data["pizzas"] if 0 < p["dispo"] <= SEUIL_BAS]
+    vide = data["total"] == 0
+    par_nom = {p["nom"]: p for p in data["pizzas"]}
+
+    for n in bloquees:
+        if n not in old.get("bloquees", []):
+            p = par_nom[n]
+            notify(f"🔴 Colonne {n} bloquée",
+                   f"{p['rouges']} pizza(s) périmée(s) bloquent la colonne : "
+                   f"{p['vertes'] + p['oranges']} pizza(s) invendable(s). À retirer au plus vite.",
+                   priority=5, tags=("rotating_light",))
+    if vide and not old.get("vide"):
+        notify("🚨 Distributeur vide", "Plus aucune pizza vendable dans le distributeur.",
+               priority=5, tags=("rotating_light",))
+    elif not vide:
+        for n in epuisees:
+            if n not in old.get("epuisees", []):
+                notify(f"⚪ {n} épuisée", f"Plus de {n} dans le distributeur "
+                       f"({data['total']} pizzas restantes au total).", priority=3)
+        for n in basses:
+            if n not in old.get("basses", []):
+                notify(f"🟠 {n} : plus que {par_nom[n]['dispo']}",
+                       f"Stock bas sur {n} ({data['total']} pizzas au total dans le distrib).",
+                       priority=3)
+
+    json.dump({"bloquees": bloquees, "basses": basses, "epuisees": epuisees, "vide": vide},
+              open(ETAT, "w", encoding="utf-8"), ensure_ascii=False)
+
+
 def main():
     if len(sys.argv) > 1:  # mode test : python srp_stock.py fragment.html
         html = open(sys.argv[1], encoding="utf-8").read()
@@ -110,6 +183,8 @@ def main():
         raise RuntimeError("Aucune colonne trouvée : la page a peut-être changé")
     with open("stock.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+    save_history(data)
+    check_alerts(data)
     print(json.dumps(data, ensure_ascii=False, indent=2))
 
 
