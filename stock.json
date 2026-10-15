@@ -1,21 +1,21 @@
 {
-  "maj": "15/10/2026 22:03",
-  "stock_machine": "15/10/2026 21:26:23",
+  "maj": "16/10/2026 01:04",
+  "stock_machine": "16/10/2026 00:50:36",
   "porte": "Fermée",
   "pizzas": [
     {
       "nom": "L'INDIENNE",
-      "dispo": 3,
+      "dispo": 2,
       "bloquee": false,
-      "vertes": 3,
+      "vertes": 2,
       "oranges": 0,
       "rouges": 0
     },
     {
       "nom": "KEBAB BLANCHE",
-      "dispo": 7,
+      "dispo": 6,
       "bloquee": false,
-      "vertes": 7,
+      "vertes": 6,
       "oranges": 0,
       "rouges": 0
     },
@@ -36,6 +36,6 @@
       "rouges": 0
     }
   ],
-  "total": 19,
+  "total": 17,
   "alertes": []
 }
