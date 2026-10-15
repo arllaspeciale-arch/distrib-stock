@@ -37,11 +37,13 @@ jobs:
           git config user.name  "stock-bot"
           git config user.email "stock-bot@users.noreply.github.com"
           for i in $(seq 1 22); do
+            # repartir à chaque fois de la dernière version en ligne (évite tout conflit)
+            git fetch -q origin main && git reset -q --hard origin/main || echo "Synchro ratée ($i)"
             python srp_stock.py > /dev/null || echo "Relevé raté ($i)"
             git add stock.json history.csv alert_state.json
             if ! git diff --cached --quiet; then
               git commit -q -m "stock $(TZ=Europe/Paris date '+%d/%m %H:%M')"
-              git pull -q --rebase && git push -q || echo "Envoi raté ($i)"
+              git push -q origin HEAD:main || echo "Envoi raté ($i)"
             fi
             if [ "$i" -lt 22 ]; then sleep 900; fi
           done
