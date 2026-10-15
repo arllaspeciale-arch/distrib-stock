@@ -1,0 +1,40 @@
+name: Stock distributeur
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # toutes les 15 min (GitHub peut décaler de quelques minutes)
+  workflow_dispatch:          # bouton "Run workflow" pour lancer à la main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stock
+  cancel-in-progress: true
+
+jobs:
+  maj:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests beautifulsoup4
+
+      - name: Lire le stock SRPManager
+        env:
+          SRP_USER: ${{ secrets.SRP_USER }}
+          SRP_PASS: ${{ secrets.SRP_PASS }}
+        run: python srp_stock.py
+
+      - name: Publier stock.json
+        run: |
+          git config user.name  "stock-bot"
+          git config user.email "stock-bot@users.noreply.github.com"
+          git add stock.json
+          git diff --cached --quiet || git commit -m "stock $(TZ=Europe/Paris date '+%d/%m %H:%M')"
+          git push
