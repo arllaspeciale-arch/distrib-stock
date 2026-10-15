@@ -32,12 +32,13 @@ jobs:
         env:
           SRP_USER: ${{ secrets.SRP_USER }}
           SRP_PASS: ${{ secrets.SRP_PASS }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: |
           git config user.name  "stock-bot"
           git config user.email "stock-bot@users.noreply.github.com"
           for i in $(seq 1 22); do
             python srp_stock.py > /dev/null || echo "Relevé raté ($i)"
-            git add stock.json
+            git add stock.json history.csv alert_state.json
             if ! git diff --cached --quiet; then
               git commit -q -m "stock $(TZ=Europe/Paris date '+%d/%m %H:%M')"
               git pull -q --rebase && git push -q || echo "Envoi raté ($i)"
