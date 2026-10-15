@@ -1,0 +1,52 @@
+name: Stock boucle
+
+# Boucle autonome : un relevé toutes les 15 min pendant ~5h30,
+# puis le programme se relance lui-même (pas besoin du planificateur GitHub).
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7 */6 * * *"   # filet de sécurité si la boucle s'arrête
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: stock-loop
+  cancel-in-progress: false
+
+jobs:
+  boucle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests beautifulsoup4
+
+      - name: Relevés toutes les 15 min
+        env:
+          SRP_USER: ${{ secrets.SRP_USER }}
+          SRP_PASS: ${{ secrets.SRP_PASS }}
+        run: |
+          git config user.name  "stock-bot"
+          git config user.email "stock-bot@users.noreply.github.com"
+          for i in $(seq 1 22); do
+            python srp_stock.py > /dev/null || echo "Relevé raté ($i)"
+            git add stock.json
+            if ! git diff --cached --quiet; then
+              git commit -q -m "stock $(TZ=Europe/Paris date '+%d/%m %H:%M')"
+              git pull -q --rebase && git push -q || echo "Envoi raté ($i)"
+            fi
+            if [ "$i" -lt 22 ]; then sleep 900; fi
+          done
+
+      - name: Relancer la boucle
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run stock-loop.yml --ref main --repo ${{ github.repository }}
