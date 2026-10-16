@@ -1,0 +1,266 @@
+<!-- ===== PAGE DISTRIBUTEUR — La Spéciale ===== -->
+<style>
+.ls-dist{background:#1A0A04;color:#f5ede0;font-family:'DM Sans',sans-serif;line-height:1.6;max-width:900px;margin:0 auto;padding:0 0 10px;box-sizing:border-box}
+.ls-dist *{box-sizing:border-box}
+.ls-dist h2,.ls-dist h3{font-family:'Playfair Display',serif;color:#fff;margin:0}
+.ls-dist p{margin:0}
+.ls-dist .ls-sec{padding:56px 22px}
+.ls-dist .ls-kicker{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#C9A84C;margin-bottom:12px}
+.ls-dist .ls-h2{font-size:clamp(26px,5vw,38px);line-height:1.15;margin-bottom:14px}
+.ls-dist .ls-h2 em{color:#C9A84C}
+.ls-dist .ls-lead{font-size:clamp(16px,2.4vw,18px);color:#e9ddd0;max-width:640px}
+.ls-dist .ls-center{text-align:center}
+.ls-dist .ls-center .ls-lead{margin:0 auto}
+/* Hero */
+.ls-dist .ls-hero{text-align:center;padding:64px 22px 40px}
+.ls-dist .ls-hero h2{font-size:clamp(30px,6.5vw,52px);line-height:1.08;margin-bottom:18px}
+.ls-dist .ls-hero h2 em{color:#C9A84C}
+.ls-dist .ls-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:24px}
+.ls-dist .ls-pills span{border:1px solid rgba(201,168,76,.4);border-radius:99px;padding:6px 14px;font-size:14px;color:#f5ede0}
+/* Chapitres */
+.ls-dist .ls-story{display:flex;flex-direction:column;gap:18px;margin-top:30px}
+.ls-dist .ls-chap{display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.22);border-radius:18px;padding:22px}
+.ls-dist .ls-ico{width:64px;height:64px;border-radius:16px;background:rgba(201,168,76,.12);display:flex;align-items:center;justify-content:center;color:#C9A84C}
+.ls-dist .ls-ico svg{width:32px;height:32px}
+.ls-dist .ls-step-n{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#C9A84C;margin-bottom:4px}
+.ls-dist .ls-chap h3{font-size:21px;margin-bottom:8px}
+.ls-dist .ls-chap p{color:#e9ddd0;font-size:16px}
+/* Fraîcheur */
+.ls-dist .ls-fresh{background:linear-gradient(180deg,rgba(201,168,76,.10),rgba(201,168,76,0));border-top:1px solid rgba(201,168,76,.25);border-bottom:1px solid rgba(201,168,76,.25)}
+.ls-dist .ls-colors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px}
+.ls-dist .ls-color{border-radius:14px;padding:18px 14px;text-align:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1)}
+.ls-dist .ls-color b{display:block;font-size:16px;margin:8px 0 4px;color:#fff}
+.ls-dist .ls-color span{font-size:14px;color:#d9ccbd}
+.ls-dist .ls-led{display:inline-block;width:14px;height:14px;border-radius:50%}
+/* Mode d'emploi */
+.ls-dist .ls-how{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:28px}
+.ls-dist .ls-how li{list-style:none;background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.22);border-radius:16px;padding:20px 14px;text-align:center}
+.ls-dist .ls-how ol{padding:0;margin:0;display:contents}
+.ls-dist .ls-num-c{width:40px;height:40px;border-radius:50%;background:#C9A84C;color:#1A0A04;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.ls-dist .ls-how b{display:block;color:#fff;font-size:16px;margin-bottom:4px}
+.ls-dist .ls-how span{font-size:14px;color:#d9ccbd}
+/* FAQ */
+.ls-dist .ls-faq{margin-top:26px;display:flex;flex-direction:column;gap:10px}
+.ls-dist details{background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.22);border-radius:14px;padding:0 18px}
+.ls-dist summary{cursor:pointer;list-style:none;padding:16px 28px 16px 0;font-weight:700;color:#fff;font-size:16px;position:relative}
+.ls-dist summary::-webkit-details-marker{display:none}
+.ls-dist summary::after{content:"+";position:absolute;right:0;top:12px;font-size:24px;color:#C9A84C;font-weight:400}
+.ls-dist details[open] summary::after{content:"–"}
+.ls-dist details p{padding:0 0 16px;color:#e9ddd0;font-size:15px}
+/* CTA */
+.ls-dist .ls-cta{text-align:center;background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.3);border-radius:20px;margin:0 22px 40px;padding:36px 22px}
+.ls-dist .ls-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:20px}
+.ls-dist .btn-g{display:inline-block;background:#C0392B;color:#fff;text-decoration:none;padding:12px 24px;border-radius:99px;font-weight:700;transition:.2s}
+.ls-dist .btn-g:hover{background:#a93226}
+.ls-dist .btn-o{display:inline-block;border:1px solid #C9A84C;color:#C9A84C;text-decoration:none;padding:11px 24px;border-radius:99px;font-weight:700;transition:.2s}
+.ls-dist .btn-o:hover{background:#C9A84C;color:#1A0A04}
+.btn-g:hover{color:#fff !important}
+@media (max-width:700px){
+  .ls-dist .ls-how{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ls-dist .ls-colors{grid-template-columns:1fr}
+  .ls-dist .ls-chap{grid-template-columns:1fr}
+  .ls-dist .ls-sec{padding:44px 18px}
+}
+
+/* --- Stock en direct (inchangé) --- */
+.ls-stock{background:#1A0A04;color:#f5ede0;font-family:'DM Sans',sans-serif;border-radius:18px;padding:28px 20px;max-width:760px;margin:0 auto;box-sizing:border-box;border:1px solid rgba(201,168,76,.3)}
+.ls-stock *{box-sizing:border-box}
+.ls-stock h2{font-family:'Playfair Display',serif;color:#C9A84C;font-size:clamp(24px,5vw,34px);margin:0 0 6px;text-align:center}
+.ls-stock .ls-sub{text-align:center;opacity:.8;margin:0 0 22px;font-size:15px}
+.ls-stock .ls-live{display:inline-flex;align-items:center;gap:7px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#C9A84C}
+.ls-stock .ls-dot{width:9px;height:9px;border-radius:50%;background:#2ecc71;box-shadow:0 0 0 0 rgba(46,204,113,.6);animation:lsPulse 1.8s infinite}
+.ls-stock .ls-dot.off{background:#888;animation:none}
+@keyframes lsPulse{70%{box-shadow:0 0 0 9px rgba(46,204,113,0)}100%{box-shadow:0 0 0 0 rgba(46,204,113,0)}}
+.ls-stock .ls-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.ls-stock .ls-card{background:rgba(255,255,255,.05);border:1px solid rgba(201,168,76,.25);border-radius:14px;padding:16px 14px;text-align:center}
+.ls-stock .ls-card:last-child:nth-child(odd){grid-column:1 / -1}
+.ls-stock .ls-name{font-family:'Playfair Display',serif;font-size:18px;text-transform:capitalize;margin-bottom:8px}
+.ls-stock .ls-num{font-size:36px;font-weight:700;line-height:1;color:#C9A84C}
+.ls-stock .ls-badge{display:inline-block;margin-top:8px;padding:4px 11px;border-radius:99px;font-size:12px;font-weight:600}
+.ls-stock .ok{background:rgba(46,204,113,.15);color:#5fe39a}
+.ls-stock .low{background:rgba(230,126,34,.18);color:#f0a35e}
+.ls-stock .out{background:rgba(192,57,43,.2);color:#ff7b6b}
+.ls-stock .ls-card.is-out{opacity:.55}
+.ls-stock .ls-card{position:relative}
+.ls-stock .ls-promo{position:absolute;top:-9px;right:-6px;background:#C0392B;color:#fff;font-weight:700;font-size:12px;padding:4px 9px;border-radius:99px;transform:rotate(6deg);box-shadow:0 2px 6px rgba(0,0,0,.4)}
+.ls-stock .ls-promo-txt{display:block;margin-top:6px;font-size:12px;color:#f0a35e}
+.ls-stock .ls-bonplan{text-align:center;background:linear-gradient(90deg,rgba(192,57,43,.25),rgba(201,168,76,.2));border:1px solid rgba(201,168,76,.4);border-radius:10px;padding:10px;margin-bottom:14px;font-size:14px;font-weight:600;display:none}
+.ls-stock .ls-card.is-out .ls-num{color:#C0392B}
+.ls-stock .ls-foot{text-align:center;margin-top:20px;font-size:13px;opacity:.75}
+.ls-stock .ls-warn{text-align:center;background:rgba(192,57,43,.15);border-radius:10px;padding:10px;margin-bottom:14px;font-size:14px;display:none}
+.ls-stock .btn-g{display:inline-block;margin-top:14px;background:#C0392B;color:#fff;text-decoration:none;padding:11px 22px;border-radius:99px;font-weight:600;transition:.2s}
+.ls-stock .btn-g:hover{background:#a93226}
+@media (max-width:420px){.ls-stock .ls-num{font-size:30px}.ls-stock .ls-name{font-size:16px}}
+</style>
+
+<div class="ls-dist">
+
+  <!-- HERO -->
+  <section class="ls-hero">
+    <span class="ls-kicker">Distributeur 24h/24 · Lambesc</span>
+    <h2>La pizza La Spéciale,<br>même quand <em>le camion dort</em></h2>
+    <p class="ls-lead" style="margin:0 auto">Il est 23h, le camion est fermé et l'envie de pizza ne passe pas&nbsp;? Notre distributeur prend le relais, jour et nuit. Et non, ce n'est pas une pizza industrielle&nbsp;: c'est la même que celle qu'on te prépare au camion.</p>
+    <div class="ls-pills"><span>Ouvert 24h/24, 7j/7</span><span>Chaude ou froide</span><span>Paiement par carte</span></div>
+  </section>
+
+  <!-- STOCK EN DIRECT -->
+  <div style="padding:0 16px">
+  <section class="ls-stock" id="ls-stock">
+    <div style="text-align:center;margin-bottom:8px"><span class="ls-live"><span class="ls-dot" id="ls-dot"></span><span id="ls-live-txt">En direct</span></span></div>
+    <h2>Le distributeur, en ce moment</h2>
+    <p class="ls-sub">Vérifie les pizzas dispo avant de te déplacer · 24h/24 · 14 Route d'Aix, Lambesc</p>
+    <div class="ls-bonplan" id="ls-bonplan"></div>
+    <div class="ls-warn" id="ls-warn"></div>
+    <div class="ls-grid" id="ls-grid"><p style="grid-column:1/-1;text-align:center;opacity:.7">Chargement du stock…</p></div>
+    <div class="ls-foot">
+      <span id="ls-maj"></span><br>
+      <a class="btn-g" href="https://www.google.com/maps?q=43.6511416,5.2638832" target="_blank" rel="noopener">📍 Y aller</a>
+    </div>
+  </section>
+  </div>
+
+  <!-- STORYTELLING -->
+  <section class="ls-sec">
+    <span class="ls-kicker">L'histoire d'une pizza</span>
+    <h2 class="ls-h2">Du camion à ta main,<br><em>en trois étapes</em></h2>
+    <p class="ls-lead">Un distributeur de pizzas, ça peut surprendre la première fois. Alors on t'explique tout, sans secret.</p>
+
+    <div class="ls-story">
+      <article class="ls-chap">
+        <div class="ls-ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17V8a2 2 0 0 1 2-2h9v11"></path><path d="M14 10h4l3 3v4h-7"></path><circle cx="7" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg></div>
+        <div>
+          <div class="ls-step-n">Étape 1</div>
+          <h3>Tout commence dans le camion</h3>
+          <p>Chaque pizza du distributeur est préparée à la main dans notre camion La Spéciale, avec notre pâte faite maison. On l'étale, on la garnit, exactement comme pour un client qui attend au comptoir. Pas d'usine, pas de surgelé&nbsp;: ce sont nos pizzas, celles qu'on fait à Lambesc depuis 1995.</p>
+        </div>
+      </article>
+
+      <article class="ls-chap">
+        <div class="ls-ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"></rect><path d="M5 10h14"></path><path d="M9 5v2"></path><path d="M9 13v3"></path></svg></div>
+        <div>
+          <div class="ls-step-n">Étape 2</div>
+          <h3>Une précuisson, puis direction le frigo</h3>
+          <p>On précuit la pizza juste ce qu'il faut, puis elle rejoint le distributeur. Car à l'intérieur, c'est avant tout un grand frigo&nbsp;: les pizzas y sont gardées au froid, comme dans ton réfrigérateur à la maison. On le recharge nous-mêmes tous les 2 à 3 jours, en petites quantités, pour que tout reste frais.</p>
+        </div>
+      </article>
+
+      <article class="ls-chap">
+        <div class="ls-ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c2 3-1 4 1 7"></path><path d="M8 6c1.5 2-.5 3 .5 5"></path><path d="M16 6c1.5 2-.5 3 .5 5"></path><rect x="3" y="13" width="18" height="8" rx="2"></rect></svg></div>
+        <div>
+          <div class="ls-step-n">Étape 3</div>
+          <h3>Deux fours pour la finir à la commande</h3>
+          <p>Quand tu choisis ta pizza chaude, la machine la sort du frigo et la passe dans l'un de ses deux fours. Quelques minutes plus tard, elle sort bien chaude, le fromage fondu, prête à manger. Et avec deux fours, deux pizzas peuvent chauffer en même temps&nbsp;: pratique quand on est plusieurs.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FRAÎCHEUR -->
+  <section class="ls-sec ls-fresh ls-center">
+    <span class="ls-kicker">La fraîcheur</span>
+    <h2 class="ls-h2">Une pizza périmée&nbsp;? <em>Impossible.</em></h2>
+    <p class="ls-lead">Chaque pizza a sa date limite, et c'est la machine elle-même qui la surveille. De notre côté, on suit tout à distance depuis notre téléphone.</p>
+    <div class="ls-colors">
+      <div class="ls-color"><span class="ls-led" style="background:#2ecc71"></span><b>Bien fraîche</b><span>Vendue au prix normal</span></div>
+      <div class="ls-color"><span class="ls-led" style="background:#f0a35e"></span><b>Dernier jour</b><span>Elle passe à -30&nbsp;% : c'est le bon plan</span></div>
+      <div class="ls-color"><span class="ls-led" style="background:#C0392B"></span><b>Date dépassée</b><span>La vente est bloquée automatiquement</span></div>
+    </div>
+  </section>
+
+  <!-- MODE D'EMPLOI -->
+  <section class="ls-sec ls-center">
+    <span class="ls-kicker">Mode d'emploi</span>
+    <h2 class="ls-h2">Première fois&nbsp;? <em>C'est tout simple.</em></h2>
+    <div class="ls-how">
+      <ol>
+        <li><div class="ls-num-c">1</div><b>Choisis ta pizza</b><span>Sur l'écran du distributeur</span></li>
+        <li><div class="ls-num-c">2</div><b>Chaude ou froide</b><span>Chaude&nbsp;: elle passe au four. Froide&nbsp;: à réchauffer chez toi</span></li>
+        <li><div class="ls-num-c">3</div><b>Paie par carte</b><span>Carte bancaire, directement sur la machine</span></li>
+        <li><div class="ls-num-c">4</div><b>Récupère-la</b><span>Et régale-toi&nbsp;!</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="ls-sec">
+    <span class="ls-kicker">Les questions qu'on nous pose</span>
+    <h2 class="ls-h2">Tu te demandes peut-être…</h2>
+    <div class="ls-faq">
+      <details><summary>C'est vraiment fait maison&nbsp;?</summary><p>Oui. Les pizzas du distributeur sont préparées par nous, dans notre camion La Spéciale, avec notre pâte faite maison. Ce sont les mêmes recettes qu'au camion.</p></details>
+      <details><summary>Elles restent combien de temps dans la machine&nbsp;?</summary><p>Quelques jours au maximum, toujours au froid. On recharge le distributeur tous les 2 à 3 jours, et la machine bloque automatiquement la vente d'une pizza dont la date est dépassée.</p></details>
+      <details><summary>Pourquoi certaines pizzas sont à -30&nbsp;%&nbsp;?</summary><p>Quand une pizza entre dans son dernier jour de vente, on baisse son prix de 30&nbsp;% plutôt que de la jeter. Elle est toujours bonne&nbsp;: c'est juste le bon plan du moment. Tu peux les repérer dans le stock en direct plus haut.</p></details>
+      <details><summary>Je la prends froide, comment la réchauffer&nbsp;?</summary><p>Quelques minutes dans un four bien chaud, et c'est comme si elle sortait du camion. Pratique pour la garder pour plus tard.</p></details>
+      <details><summary>Comment on paie&nbsp;?</summary><p>Par carte bancaire, directement sur le distributeur. Les titres restaurant ne sont pas acceptés au distributeur, mais tu peux les utiliser au camion.</p></details>
+      <details><summary>Et si ma pizza préférée est épuisée&nbsp;?</summary><p>Jette un œil au stock en direct en haut de la page avant de te déplacer. Sinon, le camion t'attend du mardi au samedi soir, avenue Gilbert Pauriol, avec toute la carte.</p></details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="ls-cta">
+    <h2 class="ls-h2" style="margin-bottom:8px">Le distributeur t'attend</h2>
+    <p class="ls-lead" style="margin:0 auto">14 Route d'Aix, à l'angle de la route principale de Lambesc. Ouvert jour et nuit.</p>
+    <div class="ls-btns">
+      <a class="btn-g" href="https://www.google.com/maps?q=43.6511416,5.2638832" target="_blank" rel="noopener">📍 Y aller</a>
+      <a class="btn-o" href="/">Voir le camion</a>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  var URL_STOCK = "https://raw.githubusercontent.com/arllaspeciale-arch/distrib-stock/main/stock.json";
+  var PEU = 3;
+  var EN = /^en/i.test(document.documentElement.lang||'');
+  var T = EN ? {out:'Sold out',low:function(n){return 'Only '+n+' left!';},ok:'Available',promo:function(o){return o+' at -30% 🔥';},bp:function(n){return '🔥 Great deal: '+n+' pizza'+(n>1?'s':'')+' at -30% right now at the vending machine!';},chk:'Checked at ',empty:'The vending machine is empty right now — restocking very soon 🍕',stale:'The stock shown is a little old: it may have changed since.',last:'Last check',na:'Stock unavailable right now.'} : {out:'Épuisée',low:function(n){return 'Plus que '+n+' !';},ok:'Disponible',promo:function(o){return 'dont '+o+' à -30% 🔥';},bp:function(n){return '🔥 Bon plan : '+n+' pizza'+(n>1?'s':'')+' à -30% en ce moment au distributeur !';},chk:'Vérifié à ',empty:'Le distributeur est vide pour le moment, réassort très bientôt 🍕',stale:'Le stock affiché date un peu : il peut avoir changé depuis.',last:'Dernier relevé',na:'Stock indisponible pour le moment.'};
+  var NOMS = {"KEBAB BLANCHE":"White Kebab","L'INDIENNE":"Indian","INDIENNE":"Indian","MEGA":"Mega","MÉGA":"Mega","MEGA BLANCHE":"Mega White","MÉGA BLANCHE":"Mega White","4 FROMAGES":"4 Cheeses","CHEVRE MIEL":"Goat's Cheese & Honey","CHÈVRE MIEL":"Goat's Cheese & Honey","NORVEGIENNE":"Norwegian","NORVÉGIENNE":"Norwegian","JAMBON":"Ham","ANCHOIS":"Anchovy","VEGETARIENNE":"Vegetarian","VÉGÉTARIENNE":"Vegetarian","MEXICAINE":"Mexican","ARMENIENNE":"Armenian","ARMÉNIENNE":"Armenian","SICILIENNE":"Sicilian","CATALANE":"Catalan","MARGHERITA BLANCHE":"White Margherita"};
+  function nom(n){ return EN && NOMS[n] ? NOMS[n] : n.toLowerCase(); }
+  function parseFR(s){ var m = s && s.match(/(\d+)\/(\d+)\/(\d+) (\d+):(\d+)/); return m ? new Date(+m[3], m[2]-1, +m[1], +m[4], +m[5]) : null; }
+  function esc(t){ var d=document.createElement('div'); d.textContent=t; return d.innerHTML; }
+  function render(d){
+    var grid = document.getElementById('ls-grid');
+    var pz = (d.pizzas||[]).slice().sort(function(a,b){ return (b.dispo>0)-(a.dispo>0) || b.dispo-a.dispo; });
+    grid.innerHTML = pz.map(function(p){
+      var n = p.dispo, cls, lab;
+      if(n<=0){ cls='out'; lab=T.out; } else if(n<=PEU){ cls='low'; lab=T.low(n); } else { cls='ok'; lab=T.ok; }
+      var o = (n>0 && p.oranges>0) ? p.oranges : 0;
+      return '<div class="ls-card'+(n<=0?' is-out':'')+'">'+(o?'<span class="ls-promo">-30%</span>':'')+'<div class="ls-name">'+esc(nom(p.nom))+'</div><div class="ls-num">'+n+'</div><span class="ls-badge '+cls+'">'+lab+'</span>'+(o?'<span class="ls-promo-txt">'+T.promo(o)+'</span>':'')+'</div>';
+    }).join('');
+    var maj = parseFR(d.maj), mach = parseFR(d.stock_machine) || maj;
+    var age = maj ? (Date.now()-maj.getTime())/60000 : 999;
+    var ageM = mach ? (Date.now()-mach.getTime())/60000 : 999;
+    document.getElementById('ls-maj').textContent = maj ? T.chk+maj.toLocaleTimeString(EN?'en-GB':'fr-FR',{hour:'2-digit',minute:'2-digit'}) : '';
+    var promo = (d.pizzas||[]).reduce(function(s,p){ return s + ((p.dispo>0 && p.oranges>0) ? p.oranges : 0); },0);
+    var bp = document.getElementById('ls-bonplan');
+    if(promo>0){ bp.style.display='block'; bp.textContent=T.bp(promo); } else bp.style.display='none';
+    var warn = document.getElementById('ls-warn');
+    if(d.total===0){ warn.style.display='block'; warn.textContent=T.empty; }
+    else if(age>60 || ageM>180){ warn.style.display='block'; warn.textContent=T.stale; }
+    else warn.style.display='none';
+    if(age>60 || ageM>180){ document.getElementById('ls-dot').classList.add('off'); document.getElementById('ls-live-txt').textContent=T.last; }
+  }
+  function load(){
+    fetch('https://api.github.com/repos/arllaspeciale-arch/distrib-stock/contents/stock.json?ref=main',{headers:{Accept:'application/vnd.github.raw+json'},cache:'no-store'})
+      .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+      .catch(function(){ return fetch(URL_STOCK+'?t='+Date.now(),{cache:'no-store'}).then(function(r){ if(!r.ok) throw 0; return r.json(); }); })
+      .then(render)
+      .catch(function(){ document.getElementById('ls-grid').innerHTML='<p style="grid-column:1/-1;text-align:center;opacity:.7">'+T.na+'</p>'; document.getElementById('ls-dot').classList.add('off'); });
+  }
+  load(); setInterval(load, 2*60*1000);
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Les pizzas du distributeur sont-elles faites maison ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Les pizzas du distributeur La Spéciale sont préparées dans notre camion à Lambesc, avec notre pâte faite maison, comme celles du camion."}},
+    {"@type":"Question","name":"Combien de temps les pizzas restent-elles dans le distributeur ?","acceptedAnswer":{"@type":"Answer","text":"Quelques jours au maximum, au froid. Le distributeur est rechargé tous les 2 à 3 jours et bloque automatiquement la vente d'une pizza dont la date est dépassée."}},
+    {"@type":"Question","name":"Pourquoi certaines pizzas sont à -30 % ?","acceptedAnswer":{"@type":"Answer","text":"Les pizzas qui entrent dans leur dernier jour de vente passent à -30 % plutôt que d'être jetées. Elles restent bonnes à consommer."}},
+    {"@type":"Question","name":"Comment payer au distributeur de pizzas de Lambesc ?","acceptedAnswer":{"@type":"Answer","text":"Par carte bancaire, directement sur la machine. Les titres restaurant ne sont pas acceptés au distributeur mais le sont au camion."}},
+    {"@type":"Question","name":"Quels sont les horaires du distributeur ?","acceptedAnswer":{"@type":"Answer","text":"Le distributeur La Spéciale, 14 Route d'Aix à Lambesc, est ouvert 24h/24 et 7j/7. Les pizzas sont proposées chaudes ou froides."}}
+  ]
+}
+</script>
+<!-- ===== FIN PAGE DISTRIBUTEUR ===== -->
