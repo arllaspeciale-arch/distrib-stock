@@ -1,13 +1,13 @@
 {
-  "maj": "20/10/2026 00:38",
-  "stock_machine": "19/10/2026 21:55:56",
+  "maj": "20/10/2026 00:53",
+  "stock_machine": "20/10/2026 00:31:27",
   "porte": "Fermée",
   "pizzas": [
     {
       "nom": "L'INDIENNE",
-      "dispo": 10,
+      "dispo": 9,
       "bloquee": false,
-      "vertes": 10,
+      "vertes": 9,
       "oranges": 0,
       "rouges": 0
     },
@@ -21,9 +21,9 @@
     },
     {
       "nom": "BURGER",
-      "dispo": 1,
+      "dispo": 0,
       "bloquee": false,
-      "vertes": 1,
+      "vertes": 0,
       "oranges": 0,
       "rouges": 0
     },
@@ -36,6 +36,6 @@
       "rouges": 0
     }
   ],
-  "total": 24,
+  "total": 22,
   "alertes": []
 }
