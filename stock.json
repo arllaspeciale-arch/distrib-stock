@@ -1,23 +1,23 @@
 {
-  "maj": "22/10/2026 22:46",
-  "stock_machine": "22/10/2026 22:13:29",
+  "maj": "22/10/2026 23:01",
+  "stock_machine": "22/10/2026 22:45:20",
   "porte": "Fermée",
   "pizzas": [
     {
       "nom": "L'INDIENNE",
-      "dispo": 0,
-      "bloquee": true,
-      "vertes": 0,
+      "dispo": 4,
+      "bloquee": false,
+      "vertes": 4,
       "oranges": 0,
-      "rouges": 2
+      "rouges": 0
     },
     {
       "nom": "KEBAB BLANCHE",
       "dispo": 0,
-      "bloquee": true,
+      "bloquee": false,
       "vertes": 0,
       "oranges": 0,
-      "rouges": 4
+      "rouges": 0
     },
     {
       "nom": "BURGER",
@@ -29,17 +29,13 @@
     },
     {
       "nom": "MARGHERITA",
-      "dispo": 0,
-      "bloquee": true,
-      "vertes": 0,
+      "dispo": 8,
+      "bloquee": false,
+      "vertes": 8,
       "oranges": 0,
-      "rouges": 1
+      "rouges": 0
     }
   ],
-  "total": 4,
-  "alertes": [
-    "Colonne L'INDIENNE bloquée : 2 périmée(s), 0 pizza(s) invendable(s)",
-    "Colonne KEBAB BLANCHE bloquée : 4 périmée(s), 0 pizza(s) invendable(s)",
-    "Colonne MARGHERITA bloquée : 1 périmée(s), 0 pizza(s) invendable(s)"
-  ]
+  "total": 16,
+  "alertes": []
 }
