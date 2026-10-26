@@ -1,6 +1,6 @@
 {
-  "maj": "26/10/2026 22:54",
-  "stock_machine": "26/10/2026 22:41:31",
+  "maj": "26/10/2026 23:09",
+  "stock_machine": "26/10/2026 23:01:57",
   "porte": "Fermée",
   "pizzas": [
     {
@@ -21,9 +21,9 @@
     },
     {
       "nom": "BURGER",
-      "dispo": 11,
+      "dispo": 10,
       "bloquee": false,
-      "vertes": 11,
+      "vertes": 10,
       "oranges": 0,
       "rouges": 0
     },
@@ -36,6 +36,6 @@
       "rouges": 0
     }
   ],
-  "total": 23,
+  "total": 22,
   "alertes": []
 }
