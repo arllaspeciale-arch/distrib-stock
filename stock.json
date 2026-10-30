@@ -1,6 +1,6 @@
 {
-  "maj": "30/10/2026 11:26",
-  "stock_machine": "30/10/2026 10:56:38",
+  "maj": "30/10/2026 11:41",
+  "stock_machine": "30/10/2026 11:23:12",
   "porte": "Fermée",
   "pizzas": [
     {
@@ -29,13 +29,13 @@
     },
     {
       "nom": "MARGHERITA",
-      "dispo": 7,
+      "dispo": 6,
       "bloquee": false,
-      "vertes": 7,
+      "vertes": 6,
       "oranges": 0,
       "rouges": 0
     }
   ],
-  "total": 20,
+  "total": 19,
   "alertes": []
 }
