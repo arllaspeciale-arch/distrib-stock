@@ -1,6 +1,6 @@
 {
-  "maj": "30/10/2026 23:47",
-  "stock_machine": "30/10/2026 23:23:09",
+  "maj": "31/10/2026 00:02",
+  "stock_machine": "30/10/2026 23:53:47",
   "porte": "Fermée",
   "pizzas": [
     {
@@ -15,8 +15,8 @@
       "nom": "KEBAB BLANCHE",
       "dispo": 7,
       "bloquee": false,
-      "vertes": 7,
-      "oranges": 0,
+      "vertes": 0,
+      "oranges": 7,
       "rouges": 0
     },
     {
