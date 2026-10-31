@@ -1,6 +1,6 @@
 {
-  "maj": "31/10/2026 07:52",
-  "stock_machine": "31/10/2026 07:22:14",
+  "maj": "31/10/2026 08:07",
+  "stock_machine": "31/10/2026 07:52:51",
   "porte": "Fermée",
   "pizzas": [
     {
@@ -13,11 +13,11 @@
     },
     {
       "nom": "KEBAB BLANCHE",
-      "dispo": 5,
-      "bloquee": false,
+      "dispo": 0,
+      "bloquee": true,
       "vertes": 0,
-      "oranges": 5,
-      "rouges": 0
+      "oranges": 0,
+      "rouges": 5
     },
     {
       "nom": "BURGER",
@@ -36,6 +36,8 @@
       "rouges": 0
     }
   ],
-  "total": 16,
-  "alertes": []
+  "total": 11,
+  "alertes": [
+    "Colonne KEBAB BLANCHE bloquée : 5 périmée(s), 0 pizza(s) invendable(s)"
+  ]
 }
