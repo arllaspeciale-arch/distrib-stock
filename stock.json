@@ -1,43 +1,41 @@
 {
-  "maj": "31/10/2026 18:57",
-  "stock_machine": "31/10/2026 18:20:57",
-  "porte": "Ouverte",
+  "maj": "31/10/2026 19:12",
+  "stock_machine": "31/10/2026 18:55:17",
+  "porte": "Fermée",
   "pizzas": [
     {
       "nom": "L'INDIENNE",
-      "dispo": 3,
+      "dispo": 9,
       "bloquee": false,
-      "vertes": 3,
+      "vertes": 9,
       "oranges": 0,
       "rouges": 0
     },
     {
       "nom": "KEBAB BLANCHE",
-      "dispo": 0,
-      "bloquee": true,
-      "vertes": 0,
+      "dispo": 8,
+      "bloquee": false,
+      "vertes": 8,
       "oranges": 0,
-      "rouges": 5
+      "rouges": 0
     },
     {
       "nom": "BURGER",
-      "dispo": 1,
+      "dispo": 8,
       "bloquee": false,
-      "vertes": 1,
+      "vertes": 8,
       "oranges": 0,
       "rouges": 0
     },
     {
       "nom": "MARGHERITA",
-      "dispo": 5,
+      "dispo": 13,
       "bloquee": false,
-      "vertes": 5,
+      "vertes": 13,
       "oranges": 0,
       "rouges": 0
     }
   ],
-  "total": 9,
-  "alertes": [
-    "Colonne KEBAB BLANCHE bloquée : 5 périmée(s), 0 pizza(s) invendable(s)"
-  ]
+  "total": 38,
+  "alertes": []
 }
