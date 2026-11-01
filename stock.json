@@ -1,6 +1,6 @@
 {
-  "maj": "01/11/2026 16:08",
-  "stock_machine": "01/11/2026 15:49:03",
+  "maj": "01/11/2026 16:23",
+  "stock_machine": "01/11/2026 16:05:23",
   "porte": "Fermée",
   "pizzas": [
     {
@@ -13,17 +13,17 @@
     },
     {
       "nom": "KEBAB BLANCHE",
-      "dispo": 6,
+      "dispo": 5,
       "bloquee": false,
-      "vertes": 6,
+      "vertes": 5,
       "oranges": 0,
       "rouges": 0
     },
     {
       "nom": "BURGER",
-      "dispo": 7,
+      "dispo": 6,
       "bloquee": false,
-      "vertes": 7,
+      "vertes": 6,
       "oranges": 0,
       "rouges": 0
     },
@@ -36,6 +36,6 @@
       "rouges": 0
     }
   ],
-  "total": 27,
+  "total": 25,
   "alertes": []
 }
