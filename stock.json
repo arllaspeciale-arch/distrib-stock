@@ -1,38 +1,38 @@
 {
-  "maj": "03/11/2026 23:57",
-  "stock_machine": "03/11/2026 23:32:20",
+  "maj": "04/11/2026 00:12",
+  "stock_machine": "04/11/2026 00:02:58",
   "porte": "Fermée",
   "pizzas": [
     {
       "nom": "L'INDIENNE",
       "dispo": 4,
       "bloquee": false,
-      "vertes": 4,
-      "oranges": 0,
+      "vertes": 0,
+      "oranges": 4,
       "rouges": 0
     },
     {
       "nom": "KEBAB BLANCHE",
       "dispo": 1,
       "bloquee": false,
-      "vertes": 1,
-      "oranges": 0,
+      "vertes": 0,
+      "oranges": 1,
       "rouges": 0
     },
     {
       "nom": "BURGER",
       "dispo": 7,
       "bloquee": false,
-      "vertes": 7,
-      "oranges": 0,
+      "vertes": 4,
+      "oranges": 3,
       "rouges": 0
     },
     {
       "nom": "MARGHERITA",
       "dispo": 8,
       "bloquee": false,
-      "vertes": 8,
-      "oranges": 0,
+      "vertes": 6,
+      "oranges": 2,
       "rouges": 0
     }
   ],
