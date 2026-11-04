@@ -1,14 +1,14 @@
 {
-  "maj": "04/11/2026 02:58",
-  "stock_machine": "04/11/2026 02:38:18",
+  "maj": "04/11/2026 03:28",
+  "stock_machine": "04/11/2026 03:09:09",
   "porte": "Fermée",
   "pizzas": [
     {
       "nom": "L'INDIENNE",
-      "dispo": 4,
+      "dispo": 2,
       "bloquee": false,
       "vertes": 0,
-      "oranges": 4,
+      "oranges": 2,
       "rouges": 0
     },
     {
@@ -36,6 +36,6 @@
       "rouges": 0
     }
   ],
-  "total": 16,
+  "total": 14,
   "alertes": []
 }
