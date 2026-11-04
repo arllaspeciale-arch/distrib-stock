@@ -1,6 +1,6 @@
 {
-  "maj": "04/11/2026 07:46",
-  "stock_machine": "04/11/2026 07:22:14",
+  "maj": "04/11/2026 08:01",
+  "stock_machine": "04/11/2026 07:52:54",
   "porte": "Fermée",
   "pizzas": [
     {
@@ -21,11 +21,11 @@
     },
     {
       "nom": "BURGER",
-      "dispo": 6,
-      "bloquee": false,
+      "dispo": 0,
+      "bloquee": true,
       "vertes": 4,
-      "oranges": 2,
-      "rouges": 0
+      "oranges": 0,
+      "rouges": 2
     },
     {
       "nom": "MARGHERITA",
@@ -36,6 +36,8 @@
       "rouges": 0
     }
   ],
-  "total": 12,
-  "alertes": []
+  "total": 6,
+  "alertes": [
+    "Colonne BURGER bloquée : 2 périmée(s), 4 pizza(s) invendable(s)"
+  ]
 }
