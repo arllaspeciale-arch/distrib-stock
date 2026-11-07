@@ -1,21 +1,21 @@
 {
-  "maj": "07/11/2026 23:33",
-  "stock_machine": "07/11/2026 23:13:11",
+  "maj": "07/11/2026 23:48",
+  "stock_machine": "07/11/2026 23:31:37",
   "porte": "Fermée",
   "pizzas": [
     {
       "nom": "CHORIZO",
-      "dispo": 5,
+      "dispo": 4,
       "bloquee": false,
-      "vertes": 5,
+      "vertes": 4,
       "oranges": 0,
       "rouges": 0
     },
     {
       "nom": "KEBAB BLANCHE",
-      "dispo": 1,
+      "dispo": 0,
       "bloquee": false,
-      "vertes": 1,
+      "vertes": 0,
       "oranges": 0,
       "rouges": 0
     },
@@ -36,6 +36,6 @@
       "rouges": 0
     }
   ],
-  "total": 20,
+  "total": 18,
   "alertes": []
 }
