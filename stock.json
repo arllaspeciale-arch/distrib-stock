@@ -1,13 +1,13 @@
 {
-  "maj": "12/11/2026 23:35",
-  "stock_machine": "12/11/2026 23:11:53",
+  "maj": "12/11/2026 23:50",
+  "stock_machine": "12/11/2026 23:40:30",
   "porte": "Fermée",
   "pizzas": [
     {
       "nom": "CHORIZO",
-      "dispo": 3,
+      "dispo": 2,
       "bloquee": false,
-      "vertes": 3,
+      "vertes": 2,
       "oranges": 0,
       "rouges": 0
     },
@@ -21,9 +21,9 @@
     },
     {
       "nom": "BURGER",
-      "dispo": 4,
+      "dispo": 3,
       "bloquee": false,
-      "vertes": 4,
+      "vertes": 3,
       "oranges": 0,
       "rouges": 0
     },
@@ -36,6 +36,6 @@
       "rouges": 0
     }
   ],
-  "total": 20,
+  "total": 18,
   "alertes": []
 }
