@@ -1,6 +1,6 @@
 {
-  "maj": "13/11/2026 23:48",
-  "stock_machine": "13/11/2026 23:11:51",
+  "maj": "14/11/2026 00:04",
+  "stock_machine": "13/11/2026 23:42:28",
   "porte": "Fermée",
   "pizzas": [
     {
@@ -15,8 +15,8 @@
       "nom": "KEBAB BLANCHE",
       "dispo": 3,
       "bloquee": false,
-      "vertes": 3,
-      "oranges": 0,
+      "vertes": 0,
+      "oranges": 3,
       "rouges": 0
     },
     {
@@ -31,8 +31,8 @@
       "nom": "MARGHERITA",
       "dispo": 6,
       "bloquee": false,
-      "vertes": 6,
-      "oranges": 0,
+      "vertes": 2,
+      "oranges": 4,
       "rouges": 0
     }
   ],
