@@ -1,10 +1,26 @@
 {
-  "maj": "13/11/2026 19:46",
-  "stock_machine": "13/11/2026 19:32:52",
+  "maj": "13/11/2026 20:01",
+  "stock_machine": "13/11/2026 19:41:07",
   "porte": "Fermée",
   "pizzas": [
     {
       "nom": "CHORIZO",
+      "dispo": 1,
+      "bloquee": false,
+      "vertes": 1,
+      "oranges": 0,
+      "rouges": 0
+    },
+    {
+      "nom": "KEBAB BLANCHE",
+      "dispo": 4,
+      "bloquee": false,
+      "vertes": 4,
+      "oranges": 0,
+      "rouges": 0
+    },
+    {
+      "nom": "BURGER",
       "dispo": 2,
       "bloquee": false,
       "vertes": 2,
@@ -12,30 +28,14 @@
       "rouges": 0
     },
     {
-      "nom": "KEBAB BLANCHE",
-      "dispo": 5,
-      "bloquee": false,
-      "vertes": 5,
-      "oranges": 0,
-      "rouges": 0
-    },
-    {
-      "nom": "BURGER",
-      "dispo": 3,
-      "bloquee": false,
-      "vertes": 3,
-      "oranges": 0,
-      "rouges": 0
-    },
-    {
       "nom": "MARGHERITA",
-      "dispo": 7,
+      "dispo": 6,
       "bloquee": false,
-      "vertes": 7,
+      "vertes": 6,
       "oranges": 0,
       "rouges": 0
     }
   ],
-  "total": 17,
+  "total": 13,
   "alertes": []
 }
