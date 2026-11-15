@@ -1,6 +1,6 @@
 {
-  "maj": "15/11/2026 13:13",
-  "stock_machine": "15/11/2026 12:59:23",
+  "maj": "15/11/2026 13:28",
+  "stock_machine": "15/11/2026 13:12:24",
   "porte": "Fermée",
   "pizzas": [
     {
@@ -29,15 +29,13 @@
     },
     {
       "nom": "MARGHERITA",
-      "dispo": 0,
-      "bloquee": true,
+      "dispo": 12,
+      "bloquee": false,
       "vertes": 12,
       "oranges": 0,
-      "rouges": 2
+      "rouges": 0
     }
   ],
-  "total": 11,
-  "alertes": [
-    "Colonne MARGHERITA bloquée : 2 périmée(s), 12 pizza(s) invendable(s)"
-  ]
+  "total": 23,
+  "alertes": []
 }
