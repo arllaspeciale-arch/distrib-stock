@@ -1,6 +1,6 @@
 {
-  "maj": "18/11/2026 07:53",
-  "stock_machine": "18/11/2026 07:22:02",
+  "maj": "18/11/2026 08:08",
+  "stock_machine": "18/11/2026 07:52:40",
   "porte": "Fermée",
   "pizzas": [
     {
@@ -13,11 +13,11 @@
     },
     {
       "nom": "KEBAB BLANCHE",
-      "dispo": 6,
-      "bloquee": false,
+      "dispo": 0,
+      "bloquee": true,
       "vertes": 0,
-      "oranges": 6,
-      "rouges": 0
+      "oranges": 0,
+      "rouges": 6
     },
     {
       "nom": "BURGER",
@@ -29,13 +29,16 @@
     },
     {
       "nom": "MARGHERITA",
-      "dispo": 9,
-      "bloquee": false,
+      "dispo": 0,
+      "bloquee": true,
       "vertes": 3,
-      "oranges": 6,
-      "rouges": 0
+      "oranges": 0,
+      "rouges": 6
     }
   ],
-  "total": 18,
-  "alertes": []
+  "total": 3,
+  "alertes": [
+    "Colonne KEBAB BLANCHE bloquée : 6 périmée(s), 0 pizza(s) invendable(s)",
+    "Colonne MARGHERITA bloquée : 6 périmée(s), 3 pizza(s) invendable(s)"
+  ]
 }
