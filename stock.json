@@ -1,6 +1,6 @@
 {
-  "maj": "22/11/2026 18:38",
-  "stock_machine": "22/11/2026 18:05:09",
+  "maj": "22/11/2026 18:53",
+  "stock_machine": "22/11/2026 18:37:52",
   "porte": "Fermée",
   "pizzas": [
     {
@@ -13,17 +13,17 @@
     },
     {
       "nom": "ROYALE",
-      "dispo": 3,
+      "dispo": 2,
       "bloquee": false,
-      "vertes": 3,
+      "vertes": 2,
       "oranges": 0,
       "rouges": 0
     },
     {
       "nom": "BURGER",
-      "dispo": 2,
+      "dispo": 1,
       "bloquee": false,
-      "vertes": 2,
+      "vertes": 1,
       "oranges": 0,
       "rouges": 0
     },
@@ -36,6 +36,6 @@
       "rouges": 0
     }
   ],
-  "total": 7,
+  "total": 5,
   "alertes": []
 }
