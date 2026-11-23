@@ -1,21 +1,21 @@
 {
-  "maj": "23/11/2026 17:36",
-  "stock_machine": "23/11/2026 17:04:08",
+  "maj": "23/11/2026 17:51",
+  "stock_machine": "23/11/2026 17:32:47",
   "porte": "Fermée",
   "pizzas": [
     {
       "nom": "CHORIZO",
-      "dispo": 1,
+      "dispo": 0,
       "bloquee": false,
-      "vertes": 1,
+      "vertes": 0,
       "oranges": 0,
       "rouges": 0
     },
     {
       "nom": "ROYALE",
-      "dispo": 1,
+      "dispo": 0,
       "bloquee": false,
-      "vertes": 1,
+      "vertes": 0,
       "oranges": 0,
       "rouges": 0
     },
@@ -36,6 +36,6 @@
       "rouges": 0
     }
   ],
-  "total": 2,
+  "total": 0,
   "alertes": []
 }
