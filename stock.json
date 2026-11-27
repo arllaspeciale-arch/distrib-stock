@@ -1,41 +1,41 @@
 {
-  "maj": "27/11/2026 00:56",
-  "stock_machine": "27/11/2026 00:16:48",
+  "maj": "27/11/2026 01:11",
+  "stock_machine": "27/11/2026 00:49:18",
   "porte": "Fermée",
   "pizzas": [
     {
       "nom": "CHORIZO",
-      "dispo": 4,
-      "bloquee": false,
-      "vertes": 4,
-      "oranges": 0,
-      "rouges": 0
-    },
-    {
-      "nom": "ROYALE",
-      "dispo": 1,
-      "bloquee": false,
-      "vertes": 1,
-      "oranges": 0,
-      "rouges": 0
-    },
-    {
-      "nom": "BURGER",
-      "dispo": 1,
-      "bloquee": false,
-      "vertes": 1,
-      "oranges": 0,
-      "rouges": 0
-    },
-    {
-      "nom": "MARGHERITA",
       "dispo": 3,
       "bloquee": false,
       "vertes": 3,
       "oranges": 0,
       "rouges": 0
+    },
+    {
+      "nom": "ROYALE",
+      "dispo": 0,
+      "bloquee": false,
+      "vertes": 0,
+      "oranges": 0,
+      "rouges": 0
+    },
+    {
+      "nom": "BURGER",
+      "dispo": 0,
+      "bloquee": false,
+      "vertes": 0,
+      "oranges": 0,
+      "rouges": 0
+    },
+    {
+      "nom": "MARGHERITA",
+      "dispo": 2,
+      "bloquee": false,
+      "vertes": 2,
+      "oranges": 0,
+      "rouges": 0
     }
   ],
-  "total": 9,
+  "total": 5,
   "alertes": []
 }
