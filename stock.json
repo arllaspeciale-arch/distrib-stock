@@ -1,6 +1,6 @@
 {
-  "maj": "28/11/2026 12:16",
-  "stock_machine": "28/11/2026 11:57:28",
+  "maj": "28/11/2026 12:31",
+  "stock_machine": "28/11/2026 12:17:55",
   "porte": "Fermée",
   "pizzas": [
     {
@@ -13,9 +13,9 @@
     },
     {
       "nom": "ROYALE",
-      "dispo": 2,
+      "dispo": 1,
       "bloquee": false,
-      "vertes": 2,
+      "vertes": 1,
       "oranges": 0,
       "rouges": 0
     },
@@ -36,6 +36,6 @@
       "rouges": 0
     }
   ],
-  "total": 7,
+  "total": 6,
   "alertes": []
 }
