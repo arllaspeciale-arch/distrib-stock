@@ -1,13 +1,13 @@
 {
-  "maj": "28/11/2026 01:39",
-  "stock_machine": "28/11/2026 01:29:51",
+  "maj": "28/11/2026 01:54",
+  "stock_machine": "28/11/2026 01:46:14",
   "porte": "Fermée",
   "pizzas": [
     {
       "nom": "CHORIZO",
-      "dispo": 1,
+      "dispo": 0,
       "bloquee": false,
-      "vertes": 1,
+      "vertes": 0,
       "oranges": 0,
       "rouges": 0
     },
@@ -29,13 +29,13 @@
     },
     {
       "nom": "MARGHERITA",
-      "dispo": 3,
+      "dispo": 2,
       "bloquee": false,
       "vertes": 1,
-      "oranges": 2,
+      "oranges": 1,
       "rouges": 0
     }
   ],
-  "total": 11,
+  "total": 9,
   "alertes": []
 }
